@@ -3,7 +3,18 @@ const inquirer = require('inquirer');
 const chalk = require('chalk');
 
 // TODO #5 Write the CLI "splash screen"
-const welcome = '';
+const welcome = chalk.green`
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	|                           Welcome to                             |
+	|   ${chalk.magenta` ____    _    _   _____   _        _____   `}${chalk.cyan` __  __   ______    `}|
+	|   ${chalk.magenta`|  _ \\  | |  | | |_   _| | |      |  __ \\`}${chalk.cyan`  |  \\/  | |  ____|   `}|
+	|   ${chalk.magenta`| |_) | | |  | |   | |   | |      | |  | | `}${chalk.cyan`| \\  / | | |__      `}|
+	|   ${chalk.magenta`|  _ <  | |  | |   | |   | |      | |  | | `}${chalk.cyan`| |\\/| | |  __|     `}|
+	|   ${chalk.magenta`| |_) | | |__| |  _| |_  | |____  | |__| | `}${chalk.cyan`| |  | | | |____    `}|
+	|   ${chalk.magenta`|____/   \\____/  |_____| |______| |_____/ `}${chalk.cyan` |_|  |_| |______|   `}|
+	|                                                                  |
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`;
 
 // TODO: #2 Create an array of questions for user input
 const questions = [
