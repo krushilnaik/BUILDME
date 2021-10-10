@@ -1,6 +1,9 @@
 // TODO: #1 Include packages needed for this application
 const inquirer = require('inquirer');
 const chalk = require('chalk');
+const fs = require('fs');
+
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO #5 Write the CLI "splash screen"
 const welcome = chalk.green`
