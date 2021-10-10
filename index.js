@@ -88,7 +88,17 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: #4 Create a function to initialize app
-function init() {}
+function init() {
+	console.log(welcome);
+
+	inquirer.prompt(questions).then((response) => {
+		console.log(`Generating README from response\n${JSON.stringify(response, null, '\t')}`);
+
+		const markdown = generateMarkdown(response);
+
+		writeToFile('SAMPLE_README.md', markdown);
+	});
+}
 
 // Function call to initialize app
 init();
