@@ -9,9 +9,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"chalk": "^4.1.2",
 		"inquirer": "^6.3.1"
-	},
-	"devDependencies": {
-		"prettier": "^2.4.1"
 	}
 }
