@@ -18,15 +18,60 @@ const welcome = chalk.green`
 
 // TODO: #2 Create an array of questions for user input
 const questions = [
-	"What's the title of your project?",
-	'Give a short description of your project:',
-	'What kind of license should your project have?',
-	'Command to install dependencies:',
-	'Command to run tests:',
-	'How is this repo used?',
-	'How can someone contribute?',
-	"What's your GitHub username?",
-	"What's your email?"
+	{
+		name: 'title',
+		type: 'input',
+		message: "What's the title of your project?"
+	},
+	{
+		name: 'description',
+		type: 'input',
+		message: 'Give a short description of your project:'
+	},
+	{
+		name: 'license',
+		type: 'list',
+		message: 'What kind of license should your project have?',
+		choices: [
+			'Apache License 2.0',
+			'Boost Software License 1.0',
+			'GNU General Public License',
+			'GNU General Public License 2.0',
+			'MIT License',
+			'Mozilla Public License 2.0',
+			'Unlicense License'
+		]
+	},
+	{
+		name: 'dependencies',
+		type: 'input',
+		message: 'Command to install dependencies:'
+	},
+	{
+		name: 'tests',
+		type: 'input',
+		message: 'Command to run tests:'
+	},
+	{
+		name: 'usage',
+		type: 'input',
+		message: 'How is this repo used?'
+	},
+	{
+		name: 'contributions',
+		type: 'input',
+		message: 'How can someone contribute?'
+	},
+	{
+		name: 'username',
+		type: 'input',
+		message: "What's your GitHub username?"
+	},
+	{
+		name: 'email',
+		type: 'input',
+		message: "What's your email?"
+	}
 ];
 
 // TODO: #3 Create a function to write README file
