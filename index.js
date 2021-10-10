@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const chalk = require('chalk');
 
 // TODO #5 Write the CLI "splash screen"
+const welcome = '';
 
 // TODO: #2 Create an array of questions for user input
 const questions = [];
