@@ -6,7 +6,17 @@ const chalk = require('chalk');
 const welcome = '';
 
 // TODO: #2 Create an array of questions for user input
-const questions = [];
+const questions = [
+	"What's the title of your project?",
+	'Give a short description of your project:',
+	'What kind of license should your project have?',
+	'Command to install dependencies:',
+	'Command to run tests:',
+	'How is this repo used?',
+	'How can someone contribute?',
+	"What's your GitHub username?",
+	"What's your email?"
+];
 
 // TODO: #3 Create a function to write README file
 function writeToFile(fileName, data) {}
