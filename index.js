@@ -1,12 +1,14 @@
-// TODO: Include packages needed for this application
+// TODO: #1 Include packages needed for this application
 
-// TODO: Create an array of questions for user input
+// TODO #5 Write the CLI "splash screen"
+
+// TODO: #2 Create an array of questions for user input
 const questions = [];
 
-// TODO: Create a function to write README file
+// TODO: #3 Create a function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+// TODO: #4 Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
