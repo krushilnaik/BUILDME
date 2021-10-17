@@ -1,11 +1,9 @@
-// TODO: #1 Include packages needed for this application
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO #5 Write the CLI "splash screen"
 const welcome = chalk.green`
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	|                           Welcome to                             |
@@ -19,7 +17,6 @@ const welcome = chalk.green`
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 `;
 
-// TODO: #2 Create an array of questions for user input
 const questions = [
 	{
 		name: 'title',
@@ -36,13 +33,19 @@ const questions = [
 		type: 'list',
 		message: 'What kind of license should your project have?',
 		choices: [
-			'Apache License 2.0',
-			'Boost Software License 1.0',
-			'GNU General Public License',
-			'GNU General Public License 2.0',
-			'MIT License',
-			'Mozilla Public License 2.0',
-			'Unlicense License'
+         'Apache License 2.0',
+         'GNU General Public License v3.0',
+         'MIT License',
+         'BSD 2-Clause "Simplified" License',
+         'BSD 3-Clause "New" or "Revised" License',
+         'Boost Software License 1.0',
+         'Creative Commons Zero v1.0 Universal',
+         'Eclipse Public License 2.0',
+         'GNU Affero General Public License v3.0',
+         'GNU General Public License v2.0',
+         'GNU Lesser General Public License v2.1',
+         'Mozilla Public License 2.0',
+         'The Unlicense'
 		]
 	},
 	{
@@ -77,8 +80,6 @@ const questions = [
 	}
 ];
 
-// TODO: #3 Create a function to write README file
-
 /**
  * @param {string} fileName
  * @param {string} data
@@ -87,12 +88,11 @@ function writeToFile(fileName, data) {
 	fs.writeFileSync(fileName, data);
 }
 
-// TODO: #4 Create a function to initialize app
 function init() {
 	console.log(welcome);
 
 	inquirer.prompt(questions).then((response) => {
-		console.log(`Generating README from response\n${JSON.stringify(response, null, '\t')}`);
+		console.log('Generating README from response');
 
 		const markdown = generateMarkdown(response);
 
