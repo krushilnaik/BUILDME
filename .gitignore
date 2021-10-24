@@ -3,8 +3,5 @@ package-lock.json
 .vscode
 .DS_Store
 
-# test READMEs
-*_README.md
-
 # misc
 readme-guide.md
