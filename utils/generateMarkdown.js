@@ -91,57 +91,62 @@ function generateMarkdown(data) {
 		username
 	} = data;
 
-	return `${renderLicenseSection(license)}
+	return `
+		${renderLicenseSection(license)}
 
-# ${title}
+		# ${title}
 
-## Description
+		## Table of Contents
 
-${description}
+		- [${title}](#${title.toLowerCase().replace(/ /g, '-')})
+		   - [Table of Contents](#table-of-contents)
+		   - [Description](#description)
+		   - [Installation](#installation)
+		   - [Usage](#usage)
+		   - [License](#license)
+		   - [Contributions](#contributions)
+		   - [Tests](#tests)
+		   - [Questions](#questions)
 
-## Table of Contents
+		## Description
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributions](#contributions)
-* [Tests](#tests)
-* [Questions](#questions)
+		${description}
 
-## Installation
+		## Installation
 
-To install necessary dependencies, run the following command:
-\`\`\`
-${dependencies}
-\`\`\`
+		To install necessary dependencies, run the following command:
+		\`\`\`
+		${dependencies}
+		\`\`\`
 
-## Usage
+		## Usage
 
-${usage}
+		${usage}
 
-## License
+		## License
 
-${
-	license
-		? `This project is licensed under the ${license}.`
-		: 'This project is not licensed.'
-}
+		${
+			license
+				? `This project is licensed under the ${license}.`
+				: 'This project is not licensed.'
+		}
 
-## Contributions
+		## Contributions
 
-${contributions}
+		${contributions}
 
-## Tests
+		## Tests
 
-To run tests, run the following command
-\`\`\`
-${tests}
-\`\`\`
+		To run tests, run the following command
+		\`\`\`
+		${tests}
+		\`\`\`
 
-## Questions
+		## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at <${email}>.
-You can find more of my work on [my GitHub](https://github.com/${username}).`;
+		If you have any questions about the repo, open an issue or contact me directly at <${email}>.
+		You can find more of my work on [my GitHub](https://github.com/${username}).
+	`.replace(/\t/g, '');
 }
 
 module.exports = generateMarkdown;
