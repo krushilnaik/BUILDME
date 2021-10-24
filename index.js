@@ -96,7 +96,7 @@ function init() {
 
 		const markdown = generateMarkdown(response);
 
-		writeToFile('SAMPLE_README.md', markdown);
+		writeToFile(`${response.title.replace(/ /g, '_')}_README.md`, markdown);
 	});
 }
 
